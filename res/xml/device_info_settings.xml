@@ -70,6 +70,12 @@
                 android:title="@string/device_feedback">
         </PreferenceScreen>
 
+        <!-- Hardware info - launches activity -->
+        <PreferenceScreen android:key="hwinfo"
+                android:title="@string/glaze_hwinfo_title"
+                android:fragment="com.android.settings.glaze.HwInfo">
+        </PreferenceScreen>
+
         <!-- Device hardware model -->
         <com.android.settings.DividerPreference
                 android:key="device_model"
