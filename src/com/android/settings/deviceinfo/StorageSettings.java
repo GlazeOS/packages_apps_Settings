@@ -84,15 +84,13 @@ public class StorageSettings extends SettingsPreferenceFragment implements Index
         return resources.getColor(R.color.storage_warning);
     }
 
-    static int[] getColorPrivate(Resources resources) {
-        return new int[] {
-                resources.getColor(R.color.storage_private_1),
-                resources.getColor(R.color.storage_private_2),
-                resources.getColor(R.color.storage_private_3),
-                resources.getColor(R.color.storage_private_4),
-                resources.getColor(R.color.storage_private_5),
-        };
-    }
+    static final int[] COLOR_PRIVATE = new int[] {
+            Color.parseColor("#ff26a69a"),
+            Color.parseColor("#ffab47bc"),
+            Color.parseColor("#fff2a600"),
+            Color.parseColor("#ffec407a"),
+            Color.parseColor("#ffc0ca33"),
+    };
 
     private StorageManager mStorageManager;
 
@@ -175,7 +173,6 @@ public class StorageSettings extends SettingsPreferenceFragment implements Index
         final List<VolumeInfo> volumes = mStorageManager.getVolumes();
         Collections.sort(volumes, VolumeInfo.getDescriptionComparator());
 
-        int[] colorPrivate = getColorPrivate(getResources());
         for (VolumeInfo vol : volumes) {
             if (vol.getType() == VolumeInfo.TYPE_PRIVATE) {
                 final long volumeTotalBytes = PrivateStorageInfo.getTotalSize(vol,
