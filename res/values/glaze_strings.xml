@@ -20,7 +20,8 @@
   <string name="glaze_version_default">Unknown</string>
 
   <!-- GlazeOS Settings -->
-    <string name="glaze_settings_title">Personalization</string>
+    <string name="glaze_settings_title">Glaze Settings</string>
+    <string name="control_settings_title">Control Settings</string>
     <string name="header_category_glaze">Glaze OS options</string>
 
    <!-- Manage applications: show substratum overlays -->
